@@ -30,103 +30,129 @@ public class alejandro_e3_layouts extends javax.swing.JFrame
     private void initComponents()
     {
 
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel7 = new javax.swing.JPanel();
-        jPanel8 = new javax.swing.JPanel();
-        jPanel9 = new javax.swing.JPanel();
+        panelPrincipal = new javax.swing.JPanel();
+        panelSuperior = new javax.swing.JPanel();
+        jLabelFiestas = new javax.swing.JLabel();
+        btnLunes = new javax.swing.JButton();
+        btnMartes = new javax.swing.JButton();
+        btnMiercoles = new javax.swing.JButton();
+        panelCentral = new javax.swing.JPanel();
+        panel0 = new javax.swing.JPanel();
+        panel1 = new javax.swing.JPanel();
+        panel2 = new javax.swing.JPanel();
+        panel3 = new javax.swing.JPanel();
+        panelInferior = new javax.swing.JPanel();
+        btnRestaurar = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+        panelPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        panelSuperior.setBackground(new java.awt.Color(102, 102, 102));
+        panelSuperior.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(76, 102, 6)));
+        panelSuperior.setLayout(new java.awt.GridLayout());
+
+        jLabelFiestas.setText("Programa Fiestas");
+        panelSuperior.add(jLabelFiestas);
+
+        btnLunes.setText("Lunes");
+        btnLunes.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btnLunesActionPerformed(evt);
+            }
+        });
+        panelSuperior.add(btnLunes);
+
+        btnMartes.setText("Martes");
+        panelSuperior.add(btnMartes);
+
+        btnMiercoles.setText("Miércoles");
+        panelSuperior.add(btnMiercoles);
+
+        panelPrincipal.add(panelSuperior, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 580, -1));
+
+        panelCentral.setLayout(new java.awt.CardLayout());
+
+        panel0.setBackground(new java.awt.Color(6, 28, 102));
+
+        javax.swing.GroupLayout panel0Layout = new javax.swing.GroupLayout(panel0);
+        panel0.setLayout(panel0Layout);
+        panel0Layout.setHorizontalGroup(
+            panel0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 580, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 43, Short.MAX_VALUE)
-        );
-
-        jPanel2.setLayout(new javax.swing.OverlayLayout(jPanel2));
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 686, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panel0Layout.setVerticalGroup(
+            panel0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 161, Short.MAX_VALUE)
         );
 
-        jPanel2.add(jPanel4);
+        panelCentral.add(panel0, "card2");
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 686, Short.MAX_VALUE)
+        javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
+        panel1.setLayout(panel1Layout);
+        panel1Layout.setHorizontalGroup(
+            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 580, Short.MAX_VALUE)
         );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panel1Layout.setVerticalGroup(
+            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 161, Short.MAX_VALUE)
         );
 
-        jPanel2.add(jPanel7);
+        panelCentral.add(panel1, "card3");
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 686, Short.MAX_VALUE)
+        javax.swing.GroupLayout panel2Layout = new javax.swing.GroupLayout(panel2);
+        panel2.setLayout(panel2Layout);
+        panel2Layout.setHorizontalGroup(
+            panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 580, Short.MAX_VALUE)
         );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panel2Layout.setVerticalGroup(
+            panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 161, Short.MAX_VALUE)
         );
 
-        jPanel2.add(jPanel8);
+        panelCentral.add(panel2, "card4");
 
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 686, Short.MAX_VALUE)
+        javax.swing.GroupLayout panel3Layout = new javax.swing.GroupLayout(panel3);
+        panel3.setLayout(panel3Layout);
+        panel3Layout.setHorizontalGroup(
+            panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 580, Short.MAX_VALUE)
         );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panel3Layout.setVerticalGroup(
+            panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 161, Short.MAX_VALUE)
         );
 
-        jPanel2.add(jPanel9);
+        panelCentral.add(panel3, "card5");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(39, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(114, Short.MAX_VALUE))
-        );
+        panelPrincipal.add(panelCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 46, 580, -1));
+
+        panelInferior.setBackground(new java.awt.Color(102, 73, 6));
+        panelInferior.setLayout(new java.awt.BorderLayout());
+
+        btnRestaurar.setText("Restaurar aplicacion");
+        panelInferior.add(btnRestaurar, java.awt.BorderLayout.CENTER);
+
+        btnSalir.setText("Salir de la aplicacion");
+        panelInferior.add(btnSalir, java.awt.BorderLayout.PAGE_START);
+
+        panelPrincipal.add(panelInferior, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 213, 580, -1));
+
+        getContentPane().add(panelPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 590, 340));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnLunesActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnLunesActionPerformed
+    {//GEN-HEADEREND:event_btnLunesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnLunesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,13 +200,19 @@ public class alejandro_e3_layouts extends javax.swing.JFrame
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
+    private javax.swing.JButton btnLunes;
+    private javax.swing.JButton btnMartes;
+    private javax.swing.JButton btnMiercoles;
+    private javax.swing.JButton btnRestaurar;
+    private javax.swing.JButton btnSalir;
+    private javax.swing.JLabel jLabelFiestas;
+    private javax.swing.JPanel panel0;
+    private javax.swing.JPanel panel1;
+    private javax.swing.JPanel panel2;
+    private javax.swing.JPanel panel3;
+    private javax.swing.JPanel panelCentral;
+    private javax.swing.JPanel panelInferior;
+    private javax.swing.JPanel panelPrincipal;
+    private javax.swing.JPanel panelSuperior;
     // End of variables declaration//GEN-END:variables
 }
