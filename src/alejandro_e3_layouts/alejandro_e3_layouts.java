@@ -5,6 +5,8 @@
  */
 package alejandro_e3_layouts;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Alejandro Campos Maestre
@@ -38,9 +40,13 @@ public class alejandro_e3_layouts extends javax.swing.JFrame
         btnMiercoles = new javax.swing.JButton();
         panelCentral = new javax.swing.JPanel();
         panel0 = new javax.swing.JPanel();
+        jlPanel0 = new javax.swing.JLabel();
         panel1 = new javax.swing.JPanel();
+        jlPanel1 = new javax.swing.JLabel();
         panel2 = new javax.swing.JPanel();
+        jlPanel2 = new javax.swing.JLabel();
         panel3 = new javax.swing.JPanel();
+        jlPanel3 = new javax.swing.JLabel();
         panelInferior = new javax.swing.JPanel();
         btnRestaurar = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
@@ -52,7 +58,7 @@ public class alejandro_e3_layouts extends javax.swing.JFrame
 
         panelSuperior.setBackground(new java.awt.Color(102, 102, 102));
         panelSuperior.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(76, 102, 6)));
-        panelSuperior.setLayout(new java.awt.GridLayout());
+        panelSuperior.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabelFiestas.setText("Programa Fiestas");
         panelSuperior.add(jLabelFiestas);
@@ -68,9 +74,23 @@ public class alejandro_e3_layouts extends javax.swing.JFrame
         panelSuperior.add(btnLunes);
 
         btnMartes.setText("Martes");
+        btnMartes.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btnMartesActionPerformed(evt);
+            }
+        });
         panelSuperior.add(btnMartes);
 
         btnMiercoles.setText("Miércoles");
+        btnMiercoles.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btnMiercolesActionPerformed(evt);
+            }
+        });
         panelSuperior.add(btnMiercoles);
 
         panelPrincipal.add(panelSuperior, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 580, -1));
@@ -78,68 +98,62 @@ public class alejandro_e3_layouts extends javax.swing.JFrame
         panelCentral.setLayout(new java.awt.CardLayout());
 
         panel0.setBackground(new java.awt.Color(6, 28, 102));
+        panel0.setAlignmentX(0.5F);
+        panel0.setAlignmentY(0.5F);
+        panel0.setLayout(new javax.swing.BoxLayout(panel0, javax.swing.BoxLayout.LINE_AXIS));
 
-        javax.swing.GroupLayout panel0Layout = new javax.swing.GroupLayout(panel0);
-        panel0.setLayout(panel0Layout);
-        panel0Layout.setHorizontalGroup(
-            panel0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 580, Short.MAX_VALUE)
-        );
-        panel0Layout.setVerticalGroup(
-            panel0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 161, Short.MAX_VALUE)
-        );
+        jlPanel0.setText("Pulsa sobre los botones para ver la programación de las actividades para ese día");
+        panel0.add(jlPanel0);
 
         panelCentral.add(panel0, "card2");
 
-        javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
-        panel1.setLayout(panel1Layout);
-        panel1Layout.setHorizontalGroup(
-            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 580, Short.MAX_VALUE)
-        );
-        panel1Layout.setVerticalGroup(
-            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 161, Short.MAX_VALUE)
-        );
+        panel1.setBackground(new java.awt.Color(102, 0, 153));
+        panel1.setLayout(new javax.swing.BoxLayout(panel1, javax.swing.BoxLayout.LINE_AXIS));
+
+        jlPanel1.setText("Eventos del lunes");
+        panel1.add(jlPanel1);
 
         panelCentral.add(panel1, "card3");
 
-        javax.swing.GroupLayout panel2Layout = new javax.swing.GroupLayout(panel2);
-        panel2.setLayout(panel2Layout);
-        panel2Layout.setHorizontalGroup(
-            panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 580, Short.MAX_VALUE)
-        );
-        panel2Layout.setVerticalGroup(
-            panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 161, Short.MAX_VALUE)
-        );
+        panel2.setBackground(new java.awt.Color(51, 102, 0));
+        panel2.setLayout(new javax.swing.BoxLayout(panel2, javax.swing.BoxLayout.LINE_AXIS));
+
+        jlPanel2.setText("Eventos del martes");
+        panel2.add(jlPanel2);
 
         panelCentral.add(panel2, "card4");
 
-        javax.swing.GroupLayout panel3Layout = new javax.swing.GroupLayout(panel3);
-        panel3.setLayout(panel3Layout);
-        panel3Layout.setHorizontalGroup(
-            panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 580, Short.MAX_VALUE)
-        );
-        panel3Layout.setVerticalGroup(
-            panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 161, Short.MAX_VALUE)
-        );
+        panel3.setBackground(new java.awt.Color(0, 102, 102));
+        panel3.setLayout(new javax.swing.BoxLayout(panel3, javax.swing.BoxLayout.LINE_AXIS));
+
+        jlPanel3.setText("Eventos del miercoles");
+        panel3.add(jlPanel3);
 
         panelCentral.add(panel3, "card5");
 
-        panelPrincipal.add(panelCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 46, 580, -1));
+        panelPrincipal.add(panelCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 46, 580, 160));
 
         panelInferior.setBackground(new java.awt.Color(102, 73, 6));
         panelInferior.setLayout(new java.awt.BorderLayout());
 
         btnRestaurar.setText("Restaurar aplicacion");
+        btnRestaurar.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btnRestaurarActionPerformed(evt);
+            }
+        });
         panelInferior.add(btnRestaurar, java.awt.BorderLayout.CENTER);
 
         btnSalir.setText("Salir de la aplicacion");
+        btnSalir.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btnSalirActionPerformed(evt);
+            }
+        });
         panelInferior.add(btnSalir, java.awt.BorderLayout.PAGE_START);
 
         panelPrincipal.add(panelInferior, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 213, 580, -1));
@@ -151,9 +165,57 @@ public class alejandro_e3_layouts extends javax.swing.JFrame
 
     private void btnLunesActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnLunesActionPerformed
     {//GEN-HEADEREND:event_btnLunesActionPerformed
-        // TODO add your handling code here:
+        desactivacionBoton(btnLunes);
+        this.panel0.setVisible(false);
+        this.panel1.setVisible(true);
     }//GEN-LAST:event_btnLunesActionPerformed
 
+    private void btnMartesActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnMartesActionPerformed
+    {//GEN-HEADEREND:event_btnMartesActionPerformed
+        desactivacionBoton(btnMartes);
+        this.panel0.setVisible(false);
+        this.panel1.setVisible(false);
+        this.panel2.setVisible(true);
+    }//GEN-LAST:event_btnMartesActionPerformed
+
+    private void btnMiercolesActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnMiercolesActionPerformed
+    {//GEN-HEADEREND:event_btnMiercolesActionPerformed
+        desactivacionBoton(btnMiercoles);
+        this.panel0.setVisible(false);
+        this.panel1.setVisible(false);
+        this.panel2.setVisible(false);
+        this.panel3.setVisible(true);
+    }//GEN-LAST:event_btnMiercolesActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnSalirActionPerformed
+    {//GEN-HEADEREND:event_btnSalirActionPerformed
+        this.setVisible(false);
+        this.dispose();
+    }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnRestaurarActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnRestaurarActionPerformed
+    {//GEN-HEADEREND:event_btnRestaurarActionPerformed
+        restaurarAplicacion();
+        this.panel0.setVisible(true);
+    }//GEN-LAST:event_btnRestaurarActionPerformed
+
+    //Metodos Personales
+    private void desactivacionBoton(javax.swing.JButton botonPulsado)
+    {
+        btnLunes.setEnabled(true);
+        btnMartes.setEnabled(true);
+        btnMiercoles.setEnabled(true);
+        
+        botonPulsado.setEnabled(false);
+    }
+    
+    private void restaurarAplicacion()
+    {
+        btnLunes.setEnabled(true);
+        btnMartes.setEnabled(true);
+        btnMiercoles.setEnabled(true);
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -206,6 +268,10 @@ public class alejandro_e3_layouts extends javax.swing.JFrame
     private javax.swing.JButton btnRestaurar;
     private javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabelFiestas;
+    private javax.swing.JLabel jlPanel0;
+    private javax.swing.JLabel jlPanel1;
+    private javax.swing.JLabel jlPanel2;
+    private javax.swing.JLabel jlPanel3;
     private javax.swing.JPanel panel0;
     private javax.swing.JPanel panel1;
     private javax.swing.JPanel panel2;
